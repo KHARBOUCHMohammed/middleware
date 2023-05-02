@@ -1,0 +1,26 @@
+<!-- Copyright (c) ZeroC, Inc. All rights reserved. -->
+
+<icegrid>
+
+  <application name="Simple">
+
+    <node name="node1">
+      <server id="SimpleServer" exe="python" activation="on-demand">
+        <option>server.py</option>
+        <adapter name="Printer" endpoints="tcp -h localhost">
+          <object identity="printer" type="::Demo::Printer" property="Identity"/>
+        </adapter>
+
+        <property name="IceMX.Metrics.Debug.GroupBy" value="id"/>
+        <property name="IceMX.Metrics.Debug.Disabled" value="1"/>
+        <property name="IceMX.Metrics.ByParent.GroupBy" value="parent"/>
+        <property name="IceMX.Metrics.ByParent.Disabled" value="1"/>
+      </server>
+    </node>
+
+  </application>
+
+</icegrid>
+
+
+

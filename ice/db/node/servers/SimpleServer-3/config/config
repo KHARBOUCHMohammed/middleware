@@ -1,0 +1,16 @@
+# Configuration file (05/02/23 16:13:16.592)
+
+# Server configuration
+Ice.Admin.ServerId=SimpleServer-3
+Ice.Admin.Endpoints=tcp -h localhost
+Ice.ProgramName=SimpleServer-3
+# Object adapter Printer
+Printer.Endpoints=tcp -h localhost
+Printer.AdapterId=SimpleServer-3.Printer
+# Server descriptor properties
+Identity=printer-3
+IceMX.Metrics.Debug.GroupBy=id
+IceMX.Metrics.Debug.Disabled=1
+IceMX.Metrics.ByParent.GroupBy=parent
+IceMX.Metrics.ByParent.Disabled=1
+Ice.Default.Locator=DemoIceGrid/Locator:default -h localhost -p 4061
